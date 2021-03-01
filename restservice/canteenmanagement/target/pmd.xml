@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.6.1" timestamp="2021-03-01T14:41:15.584">
+<file name="D:\Hexaware2021\Project\CMS\restservice\canteenmanagement\src\main\java\com\binge\CMS\model\Customer.java">
+<violation beginline="41" endline="41" begincolumn="25" endcolumn="28" rule="UnusedFormalParameter" ruleset="Unused Code" package="com.binge.CMS.model" class="Customer" method="Customer" variable="int1" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unusedcode.html#UnusedFormalParameter" priority="3">
+Avoid unused constructor parameters such as 'int1'.
+</violation>
+</file>
+<file name="D:\Hexaware2021\Project\CMS\restservice\canteenmanagement\src\main\java\com\binge\CMS\util\CliMain.java">
+<violation beginline="61" endline="61" begincolumn="16" endcolumn="29" rule="UnusedPrivateMethod" ruleset="Unused Code" package="com.binge.CMS.util" class="CliMain" method="showFullMenu" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/unusedcode.html#UnusedPrivateMethod" priority="3">
+Avoid unused private methods such as 'showFullMenu()'.
+</violation>
+</file>
+<file name="D:\Hexaware2021\Project\CMS\restservice\canteenmanagement\src\main\java\com\binge\CMS\util\CustomerUtil.java">
+<violation beginline="92" endline="92" begincolumn="35" endcolumn="35" rule="EmptyStatementNotInLoop" ruleset="Empty Code" package="com.binge.CMS.util" class="CustomerUtil" method="readCustomerValues" externalInfoUrl="https://pmd.github.io/pmd-5.6.1/pmd-java/rules/java/empty.html#EmptyStatementNotInLoop" priority="3">
+An empty statement (semicolon) not part of a loop
+</violation>
+</file>
+</pmd>
