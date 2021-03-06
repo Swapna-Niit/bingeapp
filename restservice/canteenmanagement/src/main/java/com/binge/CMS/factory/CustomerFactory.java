@@ -45,7 +45,8 @@ public class CustomerFactory {
    * @param amt insertaddress.
    * @param passcon password
    */
-  public static int addCustomer(final String name, final Long phno, final String email, final int amt, final String passcon, final Date dob) {
+  public static int addCustomer(final String name, final Long phno, final String email, 
+  final int amt, final String passcon, final Date dob) {
     int i =  dao().addCustomer(name, phno, email, amt, passcon, dob);
     return i;
   }
@@ -116,6 +117,7 @@ public class CustomerFactory {
     int i = dao().updateWalletoff(cid, finalprice);
     return i;
   }
+
 
 
 

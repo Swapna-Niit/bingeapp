@@ -17,10 +17,10 @@ public class CustomerUtil {
     private String ucusName;
     private Long ucusPhno;
     private String ucusDob;
-    private String ucusAddr;
+    //private String ucusAddr;
     private String ucusEmail;
     private String ucusPassword;
-    private float ucusWalletBalance;
+    private int ucusWalletBalance;
     private Date date_dob;
     CliMain cm = new CliMain();
     SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
@@ -41,8 +41,7 @@ public class CustomerUtil {
                 boolean done =readCustomerValues(); 
 
                 if(done) {
-                    CustomerFactory.registerNewCustomer(ucusName,ucusPhno,date_dob,
-                    ucusAddr,ucusEmail,ucusPassword,ucusWalletBalance);
+                    CustomerFactory.addCustomer(ucusName, ucusPhno, ucusEmail, ucusWalletBalance, ucusPassword, date_dob);
                 }else {
                     System.out.println("Try again...");
                 }
@@ -53,7 +52,7 @@ public class CustomerUtil {
             String pucusEmail = option.next();
             System.out.println("Enter the password  to login");
             String pucusPassword = option.next();
-            Customer existingcustomer =CustomerFactory.customerLogin(pucusEmail, pucusPassword); 
+            Customer existingcustomer =CustomerFactory.check(pucusEmail, pucusPassword); 
             if(existingcustomer != null) {
                 System.out.println("Customer logged in successfully");
                 System.out.println(" Please choose choice ....... ");
@@ -147,14 +146,14 @@ public class CustomerUtil {
                 pe.printStackTrace();
             }
 
-        System.out.println("Enter the address  ");
-        ucusAddr = option.next();
+        //System.out.println("Enter the address  ");
+        //ucusAddr = option.next();
         System.out.println("Enter the email  ");
         ucusEmail = option.next();;
         System.out.println("Enter the password  ");
         ucusPassword = option.next();
         System.out.println("Enter the wallet balance to recharge ");
-        ucusWalletBalance = option.nextFloat();
+        ucusWalletBalance = option.nextInt();
         }
         catch(Exception e) {
             e.printStackTrace();
