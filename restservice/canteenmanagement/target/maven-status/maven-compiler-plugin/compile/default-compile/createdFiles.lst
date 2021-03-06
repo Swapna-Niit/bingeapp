@@ -6,8 +6,11 @@ com\binge\CMS\model\Menu.class
 com\binge\CMS\persistence\CustomerDAO.class
 com\binge\CMS\persistence\MenuDAO.class
 com\binge\CMS\persistence\MenuMapper.class
+com\binge\CMS\model\Vendor.class
+com\binge\CMS\model\Wallet.class
 com\binge\CMS\util\MenuRest.class
 com\binge\CMS\factory\MenuFactory.class
+com\binge\CMS\model\Orders.class
 com\binge\CMS\util\CORSFilter.class
 com\binge\CMS\util\FTPApplication.class
 com\binge\CMS\model\Customer.class

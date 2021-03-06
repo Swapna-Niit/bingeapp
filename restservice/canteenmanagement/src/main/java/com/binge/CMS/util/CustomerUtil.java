@@ -6,7 +6,9 @@ import java.util.Date;
 import java.util.Scanner;
 
 import com.binge.CMS.factory.CustomerFactory;
+import com.binge.CMS.factory.MenuFactory;
 import com.binge.CMS.model.Customer;
+import com.binge.CMS.model.Menu;
 
 public class CustomerUtil {
 
@@ -20,6 +22,7 @@ public class CustomerUtil {
     private String ucusPassword;
     private float ucusWalletBalance;
     private Date date_dob;
+    CliMain cm = new CliMain();
     SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
     public final void enterCustomerPage(){
 
@@ -59,7 +62,15 @@ public class CustomerUtil {
                 System.out.println("           3.Place Order            ");
                 System.out.println(" Enter the choice: ");
                 int cus_choice = option.nextInt();
+                switch(cus_choice) {
+                case 1 :
+                showPersonalDetails();
+                case 2 :
+                rechargeWallet();
+                case 3 :
+                placeOrder();
                 
+            }
             }
             else {
                 System.out.println("Sorry.....check your user name and password");
@@ -75,6 +86,49 @@ public class CustomerUtil {
     }
 
 
+
+    private void placeOrder() {
+        try {
+
+            System.out.println("Ready to place the order");
+            System.out.println("Choose from following Menu");
+            showFullMenu();
+            System.out.println("Enter the food id");
+            int ofoodid = option.nextInt();
+            System.out.println("Enter the quantity");
+            int ofoodqty = option.nextInt();
+            System.out.println("Total amount is");
+            Menu m = MenuFactory.showMenuById(ofoodid);
+            int ofoodprice = m.getFoodCost();
+            int totalAmount = ofoodprice *ofoodqty;
+            //int newWallentBal =  m.get
+            //deductWalletBalance method
+            //OrderFac
+            System.out.println("successfully placed the order....");
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    
+    private void rechargeWallet() {
+        try {
+
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void showPersonalDetails() {
+        try {
+
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public boolean readCustomerValues() {
         try {
@@ -113,5 +167,14 @@ public class CustomerUtil {
         return true;
         
     }
-    
+    /**
+ * showFullMenu method  display the menu item stored in database.
+ */
+  private void showFullMenu() {
+    Menu[] menu = MenuFactory.showMenu();
+    System.out.println("Menu_Id");
+    for (Menu m : menu) {
+      System.out.println(m.getFoodId());
+    }
+  }
 }

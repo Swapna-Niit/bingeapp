@@ -23,6 +23,7 @@ public class MenuMapper implements ResultSetMapper<Menu> {
       /**
        * @return Menu
        */
-    return new Menu(rs.getInt("food_id"));
+    return new Menu(rs.getInt("food_id"),rs.getString("FOOD_NAME"),
+    rs.getInt("FOOD_COST"), rs.getInt("AVAIL_QUANTITY"), rs.getString("FOOD_TYPE"));
   }
 }

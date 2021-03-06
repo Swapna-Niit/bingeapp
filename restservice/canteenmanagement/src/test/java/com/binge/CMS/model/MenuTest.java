@@ -55,7 +55,7 @@ public class MenuTest {
   public final void testListAllEmpty(@Mocked final MenuDAO dao) {
     new Expectations() {
       {
-        dao.show(); result = new ArrayList<Menu>();
+        dao.showMenu(); result = new ArrayList<Menu>();
       }
     };
     new MockUp<MenuFactory>() {
@@ -80,7 +80,8 @@ public class MenuTest {
       {
         mn.add(m100);
         mn.add(m101);
-        dao.show(); result = mn;
+        dao.showMenu();
+        result = mn;
       }
     };
     new MockUp<MenuFactory>() {

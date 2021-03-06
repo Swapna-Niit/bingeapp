@@ -33,5 +33,7 @@ public interface CustomerDAO {
 
     @SqlUpdate("delete from Customer WHERE CUS_ID = (:pcusid)")
     int deleteCustomer(@Bind("pcusid") int cusid);
+
+    
     
 }

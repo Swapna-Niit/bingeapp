@@ -59,16 +59,7 @@ public class CliMain {
     option.nextLine();
     mainMenu();
   }
-/**
- * showFullMenu method  display the menu item stored in database.
- */
-  private void showFullMenu() {
-    Menu[] menu = MenuFactory.showMenu();
-    System.out.println("Menu_Id");
-    for (Menu m : menu) {
-      System.out.println(m.getFoodId());
-    }
-  }
+
 /**
  * main method  is the basic entry point for the application.
  * @param args used to get the user input.
