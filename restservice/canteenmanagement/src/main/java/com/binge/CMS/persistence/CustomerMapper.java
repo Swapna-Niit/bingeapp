@@ -13,12 +13,12 @@ public class CustomerMapper implements ResultSetMapper<Customer> {
     public Customer map(final int idx,final ResultSet rs, final StatementContext cxt) throws SQLException {
         return new Customer(rs.getInt("CUS_ID"),
         rs.getString("CUS_NAME"),
-        rs.getInt("CUS_PHONE"),
+        rs.getLong("CUS_PHONE"),
         rs.getDate("CUS_DOB"),
         rs.getString("CUS_ADDR"),
         rs.getString("CUS_EMAIL"),
         rs.getString("CURR_PASS"),
-        rs.getFloat("CUS_WALLET"));
+        rs.getFloat("CURR_AMT"));
     }
     
 }

@@ -1,14 +1,17 @@
 com\binge\CMS\factory\CustomerFactory.class
+com\binge\CMS\persistence\VendorDAO.class
 com\binge\CMS\persistence\CustomerMapper.class
 com\binge\CMS\persistence\DbConnection.class
 com\binge\CMS\util\CliMain.class
 com\binge\CMS\model\Menu.class
 com\binge\CMS\persistence\CustomerDAO.class
+com\binge\CMS\persistence\VendorMapper.class
 com\binge\CMS\persistence\MenuDAO.class
 com\binge\CMS\persistence\MenuMapper.class
 com\binge\CMS\util\MenuRest.class
 com\binge\CMS\factory\MenuFactory.class
 com\binge\CMS\util\CORSFilter.class
+com\binge\CMS\factory\VendorFactory.class
 com\binge\CMS\util\FTPApplication.class
 com\binge\CMS\model\Customer.class
 com\binge\CMS\util\CustomerUtil.class

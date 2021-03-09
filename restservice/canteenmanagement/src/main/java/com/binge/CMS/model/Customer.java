@@ -16,7 +16,7 @@ public class Customer {
 
     private int cusId;
     private String cusName;
-    private int cusPhno;
+    private long cusPhno;
     private Date cusDob;
     private String cusAddr;
     private String cusEmail;
@@ -27,7 +27,7 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(int cusId, String cusName, int cusPhno, Date cusDob, String cusAddr, String cusEmail, String cusPassword, float cusWalletBalance) {
+    public Customer(int cusId, String cusName, long cusPhno, Date cusDob, String cusAddr, String cusEmail, String cusPassword, float cusWalletBalance) {
         this.cusId = cusId;
         this.cusName = cusName;
         this.cusPhno = cusPhno;
@@ -57,11 +57,11 @@ public class Customer {
         this.cusName = cusName;
     }
 
-    public int getCusPhno() {
+    public long getCusPhno() {
         return this.cusPhno;
     }
 
-    public void setCusPhno(int cusPhno) {
+    public void setCusPhno(long cusPhno) {
         this.cusPhno = cusPhno;
     }
 
